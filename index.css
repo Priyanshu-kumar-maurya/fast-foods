@@ -1693,4 +1693,37 @@ button {
     .btn-subscribe {
         height: 48px;
     }
+
+    .cart-drawer {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.95rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .cat-tab {
+        padding: 8px 14px;
+        font-size: 0.82rem;
+    }
+
+    .section-title {
+        font-size: 1.95rem;
+    }
+
+    .order-success-card {
+        padding: 24px 16px;
+        border-radius: 20px;
+    }
 }

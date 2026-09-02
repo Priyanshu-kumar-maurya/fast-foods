@@ -152,7 +152,6 @@
     let searchQuery = '';
     let appliedCoupon = null;
 
-    // Load Cart from LocalStorage
     try {
         const savedCart = localStorage.getItem('cravebite_cart');
         if (savedCart) cart = JSON.parse(savedCart);
@@ -206,7 +205,7 @@
             foodGrid.innerHTML = `
                 <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-muted);">
                     <i class="fa-solid fa-cookie-bite" style="font-size: 3rem; margin-bottom: 12px; color: var(--secondary);"></i>
-                    <h3>No yummy dishes found</h3>
+                    <h3>No dishes found</h3>
                     <p>Try searching for something else or explore other categories!</p>
                 </div>
             `;
@@ -238,7 +237,6 @@
             </div>
         `).join('');
 
-        // Attach Add to Cart Listeners
         foodGrid.querySelectorAll('.add-to-cart-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const id = btn.getAttribute('data-id');
@@ -288,7 +286,6 @@
             </div>
         `).join('');
 
-        // Quantity controls
         cartItemsList.querySelectorAll('.minus-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const idx = parseInt(btn.getAttribute('data-index'), 10);
@@ -303,7 +300,6 @@
             });
         });
 
-        // Calculate Totals
         const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
         let discount = 0;
 
@@ -338,7 +334,6 @@
         renderCart();
         showToast(`${item.name} added to cart!`);
 
-        // Bounce effect on cart icon
         cartBtn.style.transform = 'scale(1.25)';
         setTimeout(() => { cartBtn.style.transform = 'scale(1)'; }, 200);
     }
@@ -446,7 +441,7 @@
             const code = couponInput.value.trim().toUpperCase();
             if (code === 'TASTY20') {
                 appliedCoupon = 'TASTY20';
-                couponMsg.textContent = '🎉 Coupon TASTY20 applied: 20% OFF!';
+                couponMsg.textContent = 'Coupon TASTY20 applied: 20% OFF!';
                 couponMsg.style.color = '#2ed573';
                 renderCart();
                 showToast('20% Discount applied!');
@@ -454,7 +449,7 @@
                 couponMsg.textContent = 'Please enter a promo code';
                 couponMsg.style.color = '#ffa502';
             } else {
-                couponMsg.textContent = '❌ Invalid coupon code';
+                couponMsg.textContent = 'Invalid promo code';
                 couponMsg.style.color = '#ff4757';
             }
         });
@@ -489,7 +484,6 @@
             closeCart();
             orderModal.classList.add('open');
 
-            // Clear Cart
             cart = [];
             appliedCoupon = null;
             if (couponInput) couponInput.value = '';

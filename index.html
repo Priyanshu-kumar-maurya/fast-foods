@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>CraveBite - Delicious Fast Food Delivered Hot & Fresh</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,14 +11,14 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="index.css?v=2.0">
+    <link rel="stylesheet" href="index.css?v=2.2">
 </head>
 <body>
 
     <!-- Top Announcement Bar -->
     <div class="top-announcement">
         <div class="announcement-content">
-            <span>🎉 <strong>Special Weekend Deal:</strong> Get 20% OFF on all Burgers! Use code: <mark>TASTY20</mark></span>
+            <span><i class="fa-solid fa-gift"></i> <strong>Special Weekend Deal:</strong> Get 20% OFF on all Burgers! Use code: <mark>TASTY20</mark></span>
         </div>
     </div>
 
@@ -212,7 +212,7 @@
 
             <!-- Food Items Grid -->
             <div class="food-grid" id="food-grid">
-                <!-- Food Cards will be populated dynamically by JavaScript -->
+                <!-- Food Cards dynamically populated by JavaScript -->
             </div>
         </div>
     </section>
@@ -435,7 +435,7 @@
         <div class="cart-footer" id="cart-footer">
             <!-- Coupon Code Box -->
             <div class="coupon-box">
-                <input type="text" id="coupon-input" placeholder="Promo code (e.g. TASTY20)" uppercase>
+                <input type="text" id="coupon-input" placeholder="Promo code (e.g. TASTY20)">
                 <button type="button" id="apply-coupon-btn">Apply</button>
             </div>
             <div class="coupon-msg" id="coupon-msg"></div>
@@ -471,7 +471,7 @@
             <div class="success-icon-wrap">
                 <i class="fa-solid fa-circle-check"></i>
             </div>
-            <h2>Order Placed Successfully! 🎉</h2>
+            <h2>Order Placed Successfully!</h2>
             <p>Thank you for ordering with CraveBite. Your order is being freshly prepared and will be delivered in ~25 minutes.</p>
             <div class="order-summary-box" id="modal-order-summary">
                 <!-- Summary inserted here -->
@@ -487,6 +487,6 @@
     </div>
 
     <!-- JavaScript with Cache Busting -->
-    <script src="index.js?v=2.0"></script>
+    <script src="index.js?v=2.2"></script>
 </body>
 </html>
