@@ -8,17 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="index.css?v=2.2">
+    <link rel="stylesheet" href="index.css?v=2.5">
 </head>
 <body>
 
     <!-- Top Announcement Bar -->
     <div class="top-announcement">
         <div class="announcement-content">
-            <span><i class="fa-solid fa-gift"></i> <strong>Special Weekend Deal:</strong> Get 20% OFF on all Burgers! Use code: <mark>TASTY20</mark></span>
+            <span>
+                <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1h-2.22l1.35-1.79c.2-.28.51-.46.87-.46zM9 4c.36 0 .67.18.87.46L11.22 6H9c-.55 0-1-.45-1-1s.45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg>
+                <strong>Special Weekend Deal:</strong> Get 20% OFF on all Burgers! Use code: <mark>TASTY20</mark>
+            </span>
         </div>
     </div>
 
@@ -28,7 +29,7 @@
             <!-- Brand Logo -->
             <a href="#home" class="brand-logo">
                 <div class="logo-badge">
-                    <i class="fa-solid fa-burger"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M22 17.5c0 .83-.67 1.5-1.5 1.5H3.5c-.83 0-1.5-.67-1.5-1.5v-1h20v1zm-2-9c.55 0 1 .45 1 1s-.45 1-1 1H4c-.55 0-1-.45-1-1s.45-1 1-1h16zm1-2.5C21 3.57 16.97 2 12 2S3 3.57 3 6c0 .34.04.67.12 1h17.76c.08-.33.12-.66.12-1zm-19 7h20v2H2v-2z"/></svg>
                 </div>
                 <span class="logo-text">Crave<strong>Bite</strong></span>
             </a>
@@ -46,17 +47,17 @@
             <!-- Header Action Tools -->
             <div class="header-actions">
                 <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <svg class="search-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                     <input type="text" id="food-search-input" placeholder="Search pizza, burger..." autocomplete="off">
                 </div>
                 
                 <button type="button" class="action-btn cart-toggle-btn" id="cart-btn" title="View Cart" aria-label="View Shopping Cart">
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
                     <span class="cart-counter" id="cart-counter">0</span>
                 </button>
 
                 <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
-                    <i class="fa-solid fa-bars-staggered"></i>
+                    <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
                 </button>
             </div>
         </nav>
@@ -67,7 +68,8 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-tag">
-                    <i class="fa-solid fa-fire"></i> #1 Fast Food Delivery in Town
+                    <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19.48 12.35c-1.57-.56-2.95-1.43-4.04-2.53C14.36 8.74 14 7.42 14 6c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.42-.36 2.74-1.44 3.82-1.09 1.1-2.47 1.97-4.04 2.53zM12 13.5c-3.04 0-5.5 2.46-5.5 5.5s2.46 5.5 5.5 5.5 5.5-2.46 5.5-5.5-2.46-5.5-5.5-5.5z"/></svg>
+                    <span>#1 Fast Food Delivery in Town</span>
                 </div>
                 <h1 class="hero-title">
                     Crispy, Juicy & <span class="gradient-text">Irresistible</span> Bites Everyday!
@@ -78,17 +80,17 @@
                 <div class="hero-cta-group">
                     <a href="#menu" class="btn btn-primary">
                         <span>Order Now</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
                     </a>
                     <a href="#deals" class="btn btn-outline">
-                        <i class="fa-solid fa-tag"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58s1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41s-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
                         <span>Today's Offers</span>
                     </a>
                 </div>
                 <!-- Hero Trust Stats -->
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-num">4.9<i class="fa-solid fa-star"></i></span>
+                        <span class="stat-num">4.9 <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>
                         <span class="stat-label">12k+ Happy Foodies</span>
                     </div>
                     <div class="stat-divider"></div>
@@ -111,14 +113,14 @@
                     <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" alt="Supreme Double Cheeseburger" class="main-hero-img">
                     <!-- Floating Promo Badges -->
                     <div class="floating-badge badge-top">
-                        <i class="fa-solid fa-truck-fast"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
                         <div>
                             <strong>Free Delivery</strong>
                             <span>On orders over $25</span>
                         </div>
                     </div>
                     <div class="floating-badge badge-bottom">
-                        <i class="fa-solid fa-award"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 0 0 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2z"/></svg>
                         <div>
                             <strong>Chef's Special</strong>
                             <span>Double Smoke Burger</span>
@@ -149,7 +151,8 @@
                             <span class="old-price">$18.99</span>
                         </div>
                         <button class="btn btn-deal add-deal-btn" data-id="deal-1" data-name="Mega Crunch Burger Combo" data-price="12.99" data-img="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80">
-                            <i class="fa-solid fa-plus"></i> Claim Combo
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            <span>Claim Combo</span>
                         </button>
                     </div>
                     <div class="deal-img">
@@ -168,7 +171,8 @@
                             <span class="old-price">$24.00</span>
                         </div>
                         <button class="btn btn-deal add-deal-btn" data-id="deal-2" data-name="Buy 1 Get 1 Large Pizza" data-price="16.50" data-img="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80">
-                            <i class="fa-solid fa-plus"></i> Claim Offer
+                            <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            <span>Claim Offer</span>
                         </button>
                     </div>
                     <div class="deal-img">
@@ -191,28 +195,28 @@
             <!-- Category Filter Tabs -->
             <div class="category-tabs" id="category-tabs">
                 <button type="button" class="cat-tab active" data-category="all">
-                    <i class="fa-solid fa-utensils"></i> All Items
+                    <span>All Items</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="burger">
-                    <i class="fa-solid fa-burger"></i> Burgers
+                    <span>Burgers</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="pizza">
-                    <i class="fa-solid fa-pizza-slice"></i> Pizzas
+                    <span>Pizzas</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="appetizer">
-                    <i class="fa-solid fa-drumstick-bite"></i> Appetizers
+                    <span>Appetizers</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="drinks">
-                    <i class="fa-solid fa-martini-glass-citrus"></i> Beverages
+                    <span>Beverages</span>
                 </button>
                 <button type="button" class="cat-tab" data-category="dessert">
-                    <i class="fa-solid fa-ice-cream"></i> Desserts
+                    <span>Desserts</span>
                 </button>
             </div>
 
             <!-- Food Items Grid -->
             <div class="food-grid" id="food-grid">
-                <!-- Food Cards dynamically populated by JavaScript -->
+                <!-- Dynamically Populated by JS -->
             </div>
         </div>
     </section>
@@ -228,7 +232,7 @@
             <div class="features-grid">
                 <div class="feature-box">
                     <div class="feature-icon icon-orange">
-                        <i class="fa-solid fa-truck-fast"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg>
                     </div>
                     <h3>Fast 30-Min Delivery</h3>
                     <p>Hot, fresh, and insulated delivery right to your door with real-time GPS courier tracking.</p>
@@ -236,7 +240,7 @@
 
                 <div class="feature-box">
                     <div class="feature-icon icon-green">
-                        <i class="fa-solid fa-seedling"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66 1.83-4.52C8.84 17.78 10.3 18 12 18c6.63 0 10-6 10-10H17z"/></svg>
                     </div>
                     <h3>100% Fresh Ingredients</h3>
                     <p>Locally sourced fresh produce, artisan baked buns, and gourmet organic cheese blends.</p>
@@ -244,7 +248,7 @@
 
                 <div class="feature-box">
                     <div class="feature-icon icon-red">
-                        <i class="fa-solid fa-fire-burner"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19.48 12.35c-1.57-.56-2.95-1.43-4.04-2.53C14.36 8.74 14 7.42 14 6c0-2.21 1.79-4 4-4s4 1.79 4 4c0 1.42-.36 2.74-1.44 3.82-1.09 1.1-2.47 1.97-4.04 2.53z"/></svg>
                     </div>
                     <h3>Master Chef Recipes</h3>
                     <p>Signature secret sauces and spice marinades crafted by world-class culinary chefs.</p>
@@ -252,7 +256,7 @@
 
                 <div class="feature-box">
                     <div class="feature-icon icon-blue">
-                        <i class="fa-solid fa-shield-halved"></i>
+                        <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
                     </div>
                     <h3>Hygiene & Quality Assured</h3>
                     <p>Zero-contact preparation and packaging adhering to international safety standards.</p>
@@ -272,11 +276,11 @@
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
                     <p class="review-quote">"The Smoked BBQ Bacon Burger was mind-blowing! Juiciest patty I've ever had in a long time. Delivery arrived in just 22 minutes!"</p>
                     <div class="reviewer-info">
@@ -290,11 +294,11 @@
 
                 <div class="review-card">
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
                     <p class="review-quote">"Their Truffle Mushroom Pizza and Loaded Peri Peri Fries combo is our family's weekly Friday staple. Absolute perfection!"</p>
                     <div class="reviewer-info">
@@ -308,11 +312,11 @@
 
                 <div class="review-card">
                     <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        <svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
                     </div>
                     <p class="review-quote">"The UI of this food app is so slick and ordering is super seamless. The Nutella lava cake literally melted in my mouth!"</p>
                     <div class="reviewer-info">
@@ -337,7 +341,7 @@
                     <p>Join over 25,000+ fast food lovers and receive instant 15% discount code directly to your inbox.</p>
                     <form class="newsletter-form" id="newsletter-form">
                         <div class="input-wrap">
-                            <i class="fa-solid fa-envelope"></i>
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                             <input type="email" placeholder="Enter your email address..." required>
                         </div>
                         <button type="submit" class="btn btn-subscribe">Join VIP Club</button>
@@ -347,23 +351,31 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Pure Vector SVG Icons -->
     <footer class="site-footer">
         <div class="section-container">
             <div class="footer-top">
                 <div class="footer-col brand-col">
                     <a href="#home" class="brand-logo">
                         <div class="logo-badge">
-                            <i class="fa-solid fa-burger"></i>
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M22 17.5c0 .83-.67 1.5-1.5 1.5H3.5c-.83 0-1.5-.67-1.5-1.5v-1h20v1zm-2-9c.55 0 1 .45 1 1s-.45 1-1 1H4c-.55 0-1-.45-1-1s.45-1 1-1h16zm1-2.5C21 3.57 16.97 2 12 2S3 3.57 3 6c0 .34.04.67.12 1h17.76c.08-.33.12-.66.12-1zm-19 7h20v2H2v-2z"/></svg>
                         </div>
                         <span class="logo-text">Crave<strong>Bite</strong></span>
                     </a>
                     <p class="footer-desc">Serving premium quality fast food, wood-fired pizzas, and delicious desserts with swift doorstep delivery.</p>
                     <div class="social-links">
-                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
+                            <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
                     </div>
                 </div>
 
@@ -397,14 +409,14 @@
                         <li><span>Sunday:</span> <strong>09:00 AM - Midnight</strong></li>
                     </ul>
                     <div class="contact-pill">
-                        <i class="fa-solid fa-phone"></i>
+                        <svg class="svg-icon inline-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                         <span>+1 (800) 456-CRAVE</span>
                     </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 CraveBite Fast Foods. Handcrafted with <i class="fa-solid fa-heart" style="color: #ff4757;"></i> by <a href="https://github.com/Priyanshu-kumar-maurya" target="_blank" rel="noopener">Priyanshu Kumar Maurya</a></p>
+                <p>&copy; 2026 CraveBite Fast Foods. Handcrafted with precision by <a href="https://github.com/Priyanshu-kumar-maurya" target="_blank" rel="noopener">Priyanshu Kumar Maurya</a></p>
             </div>
         </div>
     </footer>
@@ -414,22 +426,16 @@
     <aside class="cart-drawer" id="cart-drawer">
         <div class="cart-header">
             <div class="cart-title">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>
                 <h3>Your Food Cart (<span id="cart-items-count">0</span>)</h3>
             </div>
             <button type="button" class="close-cart-btn" id="close-cart-btn" title="Close Cart">
-                <i class="fa-solid fa-xmark"></i>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
             </button>
         </div>
 
         <div class="cart-body" id="cart-items-list">
             <!-- Items rendered via JS -->
-            <div class="cart-empty-state">
-                <i class="fa-solid fa-utensils"></i>
-                <h4>Your cart is empty</h4>
-                <p>Browse our delicious menu and add your favorite dishes!</p>
-                <a href="#menu" class="btn btn-primary btn-sm" id="cart-browse-btn">Explore Menu</a>
-            </div>
         </div>
 
         <div class="cart-footer" id="cart-footer">
@@ -460,7 +466,7 @@
 
             <button type="button" class="btn btn-checkout" id="checkout-btn">
                 <span>Proceed to Checkout</span>
-                <i class="fa-solid fa-arrow-right"></i>
+                <svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
             </button>
         </div>
     </aside>
@@ -469,24 +475,22 @@
     <div class="modal-overlay" id="order-modal">
         <div class="order-success-card">
             <div class="success-icon-wrap">
-                <i class="fa-solid fa-circle-check"></i>
+                <svg class="svg-icon" style="width: 60px; height: 60px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
             </div>
             <h2>Order Placed Successfully!</h2>
             <p>Thank you for ordering with CraveBite. Your order is being freshly prepared and will be delivered in ~25 minutes.</p>
-            <div class="order-summary-box" id="modal-order-summary">
-                <!-- Summary inserted here -->
-            </div>
+            <div class="order-summary-box" id="modal-order-summary"></div>
             <button type="button" class="btn btn-primary" id="close-modal-btn">Awesome, Back to Menu</button>
         </div>
     </div>
 
     <!-- Toast Alerts -->
     <div class="toast-box" id="toast">
-        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <svg class="toast-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
         <span class="toast-text">Item added to cart!</span>
     </div>
 
     <!-- JavaScript with Cache Busting -->
-    <script src="index.js?v=2.2"></script>
+    <script src="index.js?v=2.5"></script>
 </body>
 </html>

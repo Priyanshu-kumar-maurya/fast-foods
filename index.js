@@ -6,6 +6,16 @@
 (function () {
     'use strict';
 
+    // SVG icon templates to guarantee crisp rendering with zero external font dependencies
+    const SVG = {
+        star: '<svg class="svg-icon star-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>',
+        plus: '<svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>',
+        minus: '<svg class="svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13H5v-2h14v2z"/></svg>',
+        cartEmpty: '<svg class="svg-icon" style="width: 48px; height: 48px; fill: var(--secondary);" viewBox="0 0 24 24"><path fill="currentColor" d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/></svg>',
+        check: '<svg class="toast-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
+        error: '<svg class="toast-icon svg-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>'
+    };
+
     // =========================================================================
     // Food Catalog Data
     // =========================================================================
@@ -204,7 +214,7 @@
         if (filtered.length === 0) {
             foodGrid.innerHTML = `
                 <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-muted);">
-                    <i class="fa-solid fa-cookie-bite" style="font-size: 3rem; margin-bottom: 12px; color: var(--secondary);"></i>
+                    <div style="margin-bottom: 12px;">${SVG.cartEmpty}</div>
                     <h3>No dishes found</h3>
                     <p>Try searching for something else or explore other categories!</p>
                 </div>
@@ -222,7 +232,7 @@
                     <div class="food-card-header">
                         <h3 class="food-card-title">${escapeHtml(item.name)}</h3>
                         <div class="food-rating">
-                            <i class="fa-solid fa-star"></i>
+                            ${SVG.star}
                             <span>${item.rating}</span>
                         </div>
                     </div>
@@ -230,7 +240,7 @@
                     <div class="food-card-footer">
                         <span class="food-price">$${item.price.toFixed(2)}</span>
                         <button type="button" class="add-to-cart-btn" data-id="${item.id}" title="Add to Cart">
-                            <i class="fa-solid fa-plus"></i>
+                            ${SVG.plus}
                         </button>
                     </div>
                 </div>
@@ -254,7 +264,7 @@
         if (cart.length === 0) {
             cartItemsList.innerHTML = `
                 <div class="cart-empty-state">
-                    <i class="fa-solid fa-utensils"></i>
+                    <div style="margin-bottom: 8px;">${SVG.cartEmpty}</div>
                     <h4>Your cart is empty</h4>
                     <p>Browse our delicious menu and add your favorite dishes!</p>
                     <a href="#menu" class="btn btn-primary btn-sm" id="cart-browse-btn">Explore Menu</a>
@@ -279,9 +289,9 @@
                     <div class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</div>
                 </div>
                 <div class="cart-item-actions">
-                    <button type="button" class="qty-btn minus-btn" data-index="${index}"><i class="fa-solid fa-minus"></i></button>
+                    <button type="button" class="qty-btn minus-btn" data-index="${index}">${SVG.minus}</button>
                     <span class="qty-num">${item.qty}</span>
-                    <button type="button" class="qty-btn plus-btn" data-index="${index}"><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" class="qty-btn plus-btn" data-index="${index}">${SVG.plus}</button>
                 </div>
             </div>
         `).join('');
@@ -373,13 +383,13 @@
 
     function showToast(text, isError = false) {
         toast.querySelector('.toast-text').textContent = text;
-        const icon = toast.querySelector('.toast-icon');
-        if (isError) {
-            icon.className = 'fa-solid fa-circle-exclamation toast-icon';
-            icon.style.color = '#ff4757';
-        } else {
-            icon.className = 'fa-solid fa-circle-check toast-icon';
-            icon.style.color = '#2ed573';
+        const iconWrap = toast.querySelector('.toast-icon');
+        if (iconWrap) {
+            if (isError) {
+                iconWrap.outerHTML = '<svg class="toast-icon svg-icon" viewBox="0 0 24 24" style="fill: #ff4757;"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>';
+            } else {
+                iconWrap.outerHTML = '<svg class="toast-icon svg-icon" viewBox="0 0 24 24" style="fill: #2ed573;"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>';
+            }
         }
         toast.classList.add('show');
         setTimeout(() => {
