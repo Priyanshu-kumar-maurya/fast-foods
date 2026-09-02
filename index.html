@@ -1,107 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>WEB PRAROZ</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <header>
-        <div class="main">
-            <dir class="logo" >
-                <img src="logo.png" alt="">
-            </dir>
-
-
-
-            <ul>
-                <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>                
-                <li><a href="#">About</a></li>                
-                <li><a href="#">Dessert</a></li>                
-                <li><a href="#">Appetizer</a></li>                
-                <li><a href="#">Pasta</a></li>                
-                <li><a href="#">Salad</a></li>                
-                <li><a href="#">Burger</a></li>                
-                <li><a href="#">Pizza</a></li>                
-                <li><a href="#"><i class="fa fa-caret-down"></i> More Recipes</a>
-                <div class="sub-menu">
-                    <ul>
-                        <li><a href="#">Cookies</a></li>
-                            <li><a href="#">Sandwich</a></li>
-                    </ul>
-                </div>
-            </li>                
-            </ul>
-        </div>
-        <div class="title">
-            <h1>HOMIE RECIPES</h1> 
-        </div>
-        <div class="button">
-            <a href="#"class="btn">WATCH VIDEO</a>
-            <a href="#"class="btn">BASIC SKILLS</a>
-            <a href="#"class="btn">LEARN MORE</a>
-        </div>
-    </header>
-</body>
-</html>
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>CraveBite - Delicious Fast Food Delivered Hot & Fresh</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="index.css?v=2.0">
 </head>
 <body>
-    <nav>
-        <h1>zomato</h1>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Order</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="btn">
-            <button>Login</button>
-            <button>Sign Up</button>
-        </div>    
-    </nav>
-    <div class="main-div">
-        <div class="head">
-            <h1>Stay fit <br>Eat healthy</h1>
-            <button>Order</button>
-        </div>
-        <div class="img">
-            <img src="my pic.jpg" alt="">
+
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement">
+        <div class="announcement-content">
+            <span>🎉 <strong>Special Weekend Deal:</strong> Get 20% OFF on all Burgers! Use code: <mark>TASTY20</mark></span>
         </div>
     </div>
-</body>
-</html> <html> -->
-    <!-- <head>
-        <title>Restaurant Website</title>
-        <link rel="stylesheet" href="https://adnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
-    <body>
-        <div class="top">
-            <div lang="logo">Amitresto</div>
-            <i class='bx bx-menu'id="menu-icon"></i>
-            <div class="nav">
-                <a href="#">Home</a>
-                <a href="#">Menu</a>
-                <a href="#">About</a>
-                <a href="#">Location</a>
-                <a href="#">Contact</a>
+
+    <!-- Navigation Header -->
+    <header class="site-header" id="navbar">
+        <nav class="nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <div class="logo-badge">
+                    <i class="fa-solid fa-burger"></i>
+                </div>
+                <span class="logo-text">Crave<strong>Bite</strong></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#deals" class="nav-link">Deals</a></li>
+                <li><a href="#menu" class="nav-link">Our Menu</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Header Action Tools -->
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="food-search-input" placeholder="Search pizza, burger..." autocomplete="off">
+                </div>
+                
+                <button type="button" class="action-btn cart-toggle-btn" id="cart-btn" title="View Cart" aria-label="View Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-counter" id="cart-counter">0</span>
+                </button>
+
+                <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
             </div>
-            <div class="srarch">
-                <i class="fa-solid fa-search"></i>
-                <i class='bx bx-cart-alt'></i>
-                <i class="fa-solid fa-bars"></i>
-                <i class='bx bx-serach' id="serach-icon"></i>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <i class="fa-solid fa-fire"></i> #1 Fast Food Delivery in Town
+                </div>
+                <h1 class="hero-title">
+                    Crispy, Juicy & <span class="gradient-text">Irresistible</span> Bites Everyday!
+                </h1>
+                <p class="hero-description">
+                    Freshly handcrafted artisanal burgers, wood-fired cheesy pizzas, and crispy golden fries delivered directly to your doorstep in under 30 minutes.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#menu" class="btn btn-primary">
+                        <span>Order Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#deals" class="btn btn-outline">
+                        <i class="fa-solid fa-tag"></i>
+                        <span>Today's Offers</span>
+                    </a>
+                </div>
+                <!-- Hero Trust Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">4.9<i class="fa-solid fa-star"></i></span>
+                        <span class="stat-label">12k+ Happy Foodies</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">30 min</span>
+                        <span class="stat-label">Express Delivery</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-label">Fresh Ingredients</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual Banner -->
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" alt="Supreme Double Cheeseburger" class="main-hero-img">
+                    <!-- Floating Promo Badges -->
+                    <div class="floating-badge badge-top">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div>
+                            <strong>Free Delivery</strong>
+                            <span>On orders over $25</span>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <strong>Chef's Special</strong>
+                            <span>Double Smoke Burger</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html> --> 
+    </section>
+
+    <!-- Promo Deals Banner Section -->
+    <section class="deals-section" id="deals">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Hot Deals & Combos</span>
+                <h2 class="section-title">Save Big on Your Favorite Craving</h2>
+            </div>
+
+            <div class="deals-grid">
+                <!-- Deal Card 1 -->
+                <div class="deal-card deal-card-1">
+                    <div class="deal-content">
+                        <span class="deal-tag">Weekend Combo</span>
+                        <h3>Mega Crunch Burger + Peri Peri Fries</h3>
+                        <p class="deal-desc">Served with ice-chilled Coke & spicy garlic dip.</p>
+                        <div class="deal-price">
+                            <span class="current-price">$12.99</span>
+                            <span class="old-price">$18.99</span>
+                        </div>
+                        <button class="btn btn-deal add-deal-btn" data-id="deal-1" data-name="Mega Crunch Burger Combo" data-price="12.99" data-img="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80">
+                            <i class="fa-solid fa-plus"></i> Claim Combo
+                        </button>
+                    </div>
+                    <div class="deal-img">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=500&q=80" alt="Burger Combo">
+                    </div>
+                </div>
+
+                <!-- Deal Card 2 -->
+                <div class="deal-card deal-card-2">
+                    <div class="deal-content">
+                        <span class="deal-tag">Pizza Lovers</span>
+                        <h3>Buy 1 Large Cheesy Pizza & Get 1 Free</h3>
+                        <p class="deal-desc">Wood-fired sourdough base with 100% Mozzarella.</p>
+                        <div class="deal-price">
+                            <span class="current-price">$16.50</span>
+                            <span class="old-price">$24.00</span>
+                        </div>
+                        <button class="btn btn-deal add-deal-btn" data-id="deal-2" data-name="Buy 1 Get 1 Large Pizza" data-price="16.50" data-img="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80">
+                            <i class="fa-solid fa-plus"></i> Claim Offer
+                        </button>
+                    </div>
+                    <div class="deal-img">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Cheesy Pizza Deal">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Delicious Catalog</span>
+                <h2 class="section-title">Explore Our Flavorful Menu</h2>
+                <p class="section-description">Choose from our freshly prepared fast food options, crafted with premium grade ingredients.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="category-tabs" id="category-tabs">
+                <button type="button" class="cat-tab active" data-category="all">
+                    <i class="fa-solid fa-utensils"></i> All Items
+                </button>
+                <button type="button" class="cat-tab" data-category="burger">
+                    <i class="fa-solid fa-burger"></i> Burgers
+                </button>
+                <button type="button" class="cat-tab" data-category="pizza">
+                    <i class="fa-solid fa-pizza-slice"></i> Pizzas
+                </button>
+                <button type="button" class="cat-tab" data-category="appetizer">
+                    <i class="fa-solid fa-drumstick-bite"></i> Appetizers
+                </button>
+                <button type="button" class="cat-tab" data-category="drinks">
+                    <i class="fa-solid fa-martini-glass-citrus"></i> Beverages
+                </button>
+                <button type="button" class="cat-tab" data-category="dessert">
+                    <i class="fa-solid fa-ice-cream"></i> Desserts
+                </button>
+            </div>
+
+            <!-- Food Items Grid -->
+            <div class="food-grid" id="food-grid">
+                <!-- Food Cards will be populated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="features-section" id="why-us">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Why Choose CraveBite</span>
+                <h2 class="section-title">We Deliver The Best Food Experience</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon icon-orange">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3>Fast 30-Min Delivery</h3>
+                    <p>Hot, fresh, and insulated delivery right to your door with real-time GPS courier tracking.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon icon-green">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3>100% Fresh Ingredients</h3>
+                    <p>Locally sourced fresh produce, artisan baked buns, and gourmet organic cheese blends.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon icon-red">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3>Master Chef Recipes</h3>
+                    <p>Signature secret sauces and spice marinades crafted by world-class culinary chefs.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon icon-blue">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Hygiene & Quality Assured</h3>
+                    <p>Zero-contact preparation and packaging adhering to international safety standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews / Testimonials -->
+    <section class="reviews-section" id="reviews">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle">Foodie Feedback</span>
+                <h2 class="section-title">What Our Customers Say</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-quote">"The Smoked BBQ Bacon Burger was mind-blowing! Juiciest patty I've ever had in a long time. Delivery arrived in just 22 minutes!"</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Sophia M." class="reviewer-avatar">
+                        <div>
+                            <h4>Sophia Miller</h4>
+                            <span>Verified Foodie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-quote">"Their Truffle Mushroom Pizza and Loaded Peri Peri Fries combo is our family's weekly Friday staple. Absolute perfection!"</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="David K." class="reviewer-avatar">
+                        <div>
+                            <h4>David Kumar</h4>
+                            <span>Regular Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-quote">"The UI of this food app is so slick and ordering is super seamless. The Nutella lava cake literally melted in my mouth!"</p>
+                    <div class="reviewer-info">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="Elena R." class="reviewer-avatar">
+                        <div>
+                            <h4>Elena Rodriguez</h4>
+                            <span>Food Blogger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter & App CTA -->
+    <section class="newsletter-section" id="contact">
+        <div class="section-container">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <span class="badge-pill">Stay Updated</span>
+                    <h2>Subscribe For Exclusive Secret Deals & Free Desserts</h2>
+                    <p>Join over 25,000+ fast food lovers and receive instant 15% discount code directly to your inbox.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="input-wrap">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Enter your email address..." required>
+                        </div>
+                        <button type="submit" class="btn btn-subscribe">Join VIP Club</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="#home" class="brand-logo">
+                        <div class="logo-badge">
+                            <i class="fa-solid fa-burger"></i>
+                        </div>
+                        <span class="logo-text">Crave<strong>Bite</strong></span>
+                    </a>
+                    <p class="footer-desc">Serving premium quality fast food, wood-fired pizzas, and delicious desserts with swift doorstep delivery.</p>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#deals">Special Combos</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#why-us">Why Choose Us</a></li>
+                        <li><a href="#reviews">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Food Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Artisan Burgers</a></li>
+                        <li><a href="#menu">Wood-Fired Pizza</a></li>
+                        <li><a href="#menu">Crispy Chicken & Fries</a></li>
+                        <li><a href="#menu">Shakes & Beverages</a></li>
+                        <li><a href="#menu">Gourmet Desserts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul class="opening-hours">
+                        <li><span>Mon - Fri:</span> <strong>10:00 AM - 11:30 PM</strong></li>
+                        <li><span>Saturday:</span> <strong>09:00 AM - 01:00 AM</strong></li>
+                        <li><span>Sunday:</span> <strong>09:00 AM - Midnight</strong></li>
+                    </ul>
+                    <div class="contact-pill">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+1 (800) 456-CRAVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CraveBite Fast Foods. Handcrafted with <i class="fa-solid fa-heart" style="color: #ff4757;"></i> by <a href="https://github.com/Priyanshu-kumar-maurya" target="_blank" rel="noopener">Priyanshu Kumar Maurya</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slide-Out Shopping Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <div class="cart-title">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <h3>Your Food Cart (<span id="cart-items-count">0</span>)</h3>
+            </div>
+            <button type="button" class="close-cart-btn" id="close-cart-btn" title="Close Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-body" id="cart-items-list">
+            <!-- Items rendered via JS -->
+            <div class="cart-empty-state">
+                <i class="fa-solid fa-utensils"></i>
+                <h4>Your cart is empty</h4>
+                <p>Browse our delicious menu and add your favorite dishes!</p>
+                <a href="#menu" class="btn btn-primary btn-sm" id="cart-browse-btn">Explore Menu</a>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cart-footer">
+            <!-- Coupon Code Box -->
+            <div class="coupon-box">
+                <input type="text" id="coupon-input" placeholder="Promo code (e.g. TASTY20)" uppercase>
+                <button type="button" id="apply-coupon-btn">Apply</button>
+            </div>
+            <div class="coupon-msg" id="coupon-msg"></div>
+
+            <!-- Bill Breakdown -->
+            <div class="bill-row">
+                <span>Subtotal</span>
+                <span id="bill-subtotal">$0.00</span>
+            </div>
+            <div class="bill-row" id="discount-row" style="display: none;">
+                <span>Discount (20%)</span>
+                <span class="discount-val" id="bill-discount">-$0.00</span>
+            </div>
+            <div class="bill-row">
+                <span>Delivery Fee</span>
+                <span id="bill-delivery">$2.50</span>
+            </div>
+            <div class="bill-row total-row">
+                <span>Total Amount</span>
+                <strong id="bill-total">$0.00</strong>
+            </div>
+
+            <button type="button" class="btn btn-checkout" id="checkout-btn">
+                <span>Proceed to Checkout</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Order Placed Success Modal -->
+    <div class="modal-overlay" id="order-modal">
+        <div class="order-success-card">
+            <div class="success-icon-wrap">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Order Placed Successfully! 🎉</h2>
+            <p>Thank you for ordering with CraveBite. Your order is being freshly prepared and will be delivered in ~25 minutes.</p>
+            <div class="order-summary-box" id="modal-order-summary">
+                <!-- Summary inserted here -->
+            </div>
+            <button type="button" class="btn btn-primary" id="close-modal-btn">Awesome, Back to Menu</button>
+        </div>
+    </div>
+
+    <!-- Toast Alerts -->
+    <div class="toast-box" id="toast">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <span class="toast-text">Item added to cart!</span>
+    </div>
+
+    <!-- JavaScript with Cache Busting -->
+    <script src="index.js?v=2.0"></script>
+</body>
+</html>
